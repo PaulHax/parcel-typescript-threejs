@@ -1,30 +1,28 @@
-import { 
-  Scene, 
-  PerspectiveCamera, 
-  WebGLRenderer, 
+import {
+  Scene,
+  PerspectiveCamera,
+  WebGLRenderer,
   Mesh,
   CylinderBufferGeometry,
-  MeshBasicMaterial,
-  
-} from 'three';
+  MeshBasicMaterial
+} from "three";
 
 export default class AppGame {
+  wWidth: number;
+  wHeight: number;
 
-  wWidth:number;
-  wHeight:number;
+  scene: Scene;
+  camera: PerspectiveCamera;
+  renderer: WebGLRenderer;
 
-  scene:Scene;
-  camera:PerspectiveCamera;
-  renderer:WebGLRenderer;
+  cube: Mesh;
 
-  cube:Mesh;
-
-  get aspect (){
+  get aspect() {
     return this.wWidth / this.wHeight;
   }
 
   constructor() {
-    this.wWidth  = window.innerWidth;
+    this.wWidth = window.innerWidth;
     this.wHeight = window.innerHeight;
 
     // create Scene
@@ -45,17 +43,17 @@ export default class AppGame {
     this.scene.add(this.cube);
 
     this.renderer = new WebGLRenderer();
-    this.renderer.setSize( this.wWidth, this.wHeight );
-    document.body.appendChild( this.renderer.domElement );
+    this.renderer.setSize(this.wWidth, this.wHeight);
+    document.body.appendChild(this.renderer.domElement);
 
     // add Events Global
-    window.addEventListener( 'resize', this.onWindowResize.bind(this), false);
+    window.addEventListener("resize", this.onWindowResize.bind(this), false);
 
     this.animate();
   }
 
   onWindowResize() {
-    this.wWidth  = window.innerWidth;
+    this.wWidth = window.innerWidth;
     this.wHeight = window.innerHeight;
 
     this.camera.aspect = this.aspect;

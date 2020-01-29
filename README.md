@@ -1,6 +1,8 @@
 # parcel-typescript-threejs
 Example App using Three.js and Typescript bundled with parcel 🚀🔥.
 
+Added static assets folder, ESLint+Prettier.
+
 ### Highlights
 - ⚡️  Super fast start
 - 🔥  Hot module replacement.

@@ -1,9 +1,2 @@
-import AppGame from './AppGame';
-
-let isDevelop:Boolean = true;
-
+import AppGame from "./AppGame";
 const game = new AppGame();
-
-if(isDevelop) {
-  window.game = game;
-}
