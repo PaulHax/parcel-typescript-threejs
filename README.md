@@ -31,3 +31,4 @@ go to [http://localhost:1234](http://localhost:1234) in your browser. Done.
 
 * `npm run start` - runs the compiler and a server at the same time in dev mode with HMR (Hot Module Replacement) 🔥.
 * `npm run build` - runs the compiler once and generates a production build.
+* `npm run deploy` - runs compiler and pushes dist folder to gh-pages.  Need to setup github repo first.
